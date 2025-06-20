@@ -1,4 +1,6 @@
 .legal-header {
+  position: sticky;
+  top: 60px;
   background-color: #e2e2e2;
   padding: 30px;
   margin-top: 60px;
@@ -9,9 +11,6 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-}
-
-main {
 }
 
 section {
@@ -26,10 +25,13 @@ section {
 }
 
 .section-label {
+  position:sticky;
+  top: 180px;
   width: 100%;
   background-color: #2b2d3b;
   height: max-content;
   padding: 10px 16px;
+  z-index: -1;
 }
 
 .document-content {
@@ -54,6 +56,8 @@ section {
 
 footer {
   display: flex;
+  position: sticky;
+  bottom: 0;
   align-items: center;
   width: 100%;
   background-color: #e2e2e2;
