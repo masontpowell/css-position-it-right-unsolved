@@ -22,6 +22,7 @@
   background-color: red;
   border-radius: 15px;
   border-top: 5px dotted black;
+  animation: left-eye 2s infinite ease-in-out;
 }
 
 .robot-eye-right {
@@ -35,6 +36,10 @@
   border-top: 5px dotted black;
 }
 
+.robot-eye-right:hover {
+  animation: peekaboo 1.5s infinite;
+}
+
 .robot-ear-left {
   position: relative;
   bottom: 400px;
@@ -43,6 +48,7 @@
   width: 40px;
   border-radius: 15%;
   background-color: blue;
+  animation: left-ear-move 3s infinite;
 }
 
 .robot-ear-right {
@@ -53,6 +59,7 @@
   width: 40px;
   border-radius: 15%;
   background-color: blue;
+  animation: right-ear-move 3s infinite;
 }
 
 .robot-nose {
@@ -63,6 +70,7 @@
   border-top: 50px solid transparent;
   border-left: 100px solid red;
   border-bottom: 50px solid transparent;
+  animation: scale-bigger 2s infinite;
 }
 
 .robot-teeth {
@@ -73,6 +81,7 @@
   border-radius: 15%;
   border: 10px solid black;
   background-color: green;
+  animation: mouth 2s infinite;
 }
 
 .robot-tooth {
@@ -85,6 +94,7 @@
   border: 3px solid blue;
   background-color: red;
   opacity: 50%;
+  animation: rotate-teef 2s infinite;
 }
 
 .robot-hair-style {
@@ -96,6 +106,7 @@
   border-radius: 15px;
   border: 3px dashed blue;
   background-image: url("https://picsum.photos/450/70");
+  animation: hairtop 3s infinite;
 }
 
 .robot-hair-one {
@@ -106,6 +117,7 @@
   transform: rotate(-45deg);
   border-radius: 50%;
   background-color: pink;
+  animation: hair-strands 2s infinite;
 }
 
 .robot-hair-two {
@@ -116,7 +128,7 @@
   transform: rotate(45deg);
   border-radius: 50%;
   background-color: purple;
-
+  animation: hair-strands 2s infinite;
 }
 
 .robot-hair-three {
@@ -127,4 +139,163 @@
   transform: rotate(-45deg);
   border-radius: 50%;
   background-color: green;
+  animation: hair-strands 2s infinite;
+}
+
+@keyframes scale-bigger {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(2);
+  }
+  75%{
+    transform: scale(1.5);
+  }
+  90% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate-teef {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes peekaboo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes left-ear-move {
+  0% {
+    transform-origin: -100px;
+  }
+  20% {
+    transform: translateX(15deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: translateX(-15deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes right-ear-move {
+  0% {
+    transform-origin: 100px;
+  }
+  20% {
+    transform: translateX(-15deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: translateX(15deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes left-eye {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: darkorange;
+  }
+  50% {
+    background-color: yellow;
+  }
+  75% {
+    background-color: salmon;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes mouth {
+  0% {
+    transform:skewX(0);
+  }
+  33% {
+    transform: skewX(35deg);
+  }
+  66% {
+    transform: skewX(-35deg)
+  }
+  100% {
+    transform: skewX(0);
+  }
+}
+
+@keyframes hairtop {
+  0% {
+    transform:skew(0);
+  }
+  33% {
+    transform: skew(35deg);
+  }
+  66% {
+    transform: skew(-35deg)
+  }
+  100% {
+    transform: skew(0);
+  }
+}
+
+@keyframes hair-strands {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+    rotate: 180deg;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(15px);
+    rotate: 180deg;
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
